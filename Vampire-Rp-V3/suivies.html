@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Système de Suivis RP — Vampire RP V3." />
+    <title>Suivies RP — Vampire RP V3</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
+            <img src="logo.png" alt="Logo Vampire RP V3" />
+          </a>
+          <a href="https://discord.gg/UvqNCvHMnk" target="_blank" rel="noopener noreferrer" class="brand-mark discord-mark" aria-label="Rejoindre le Discord">
+            <svg class="discord-svg" viewBox="0 0 127.14 96.36" role="img">
+              <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+            </svg>
+          </a>
+          <a href="ts3server://94.250.223.28:15071" class="brand-mark teamspeak-mark" aria-label="TeamSpeak">
+            <div class="teamspeak-icon" role="img" aria-label="Logo TeamSpeak"></div>
+          </a>
+        </div>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="reglement.html" class="nav-link">Règlement</a>
+          <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer" class="nav-link">Workshop</a>
+          <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer" class="nav-link">Boutique</a>
+          <a href="lore.html" class="nav-link">Lore</a>
+          <a href="wiki.html" class="nav-link">Wiki</a>
+        </nav>
+        <div class="header-right">
+          <div id="auth-button" class="auth-button"></div>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+        <a href="reglement.html">Règlement</a>
+        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer">Workshop</a>
+        <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer">Boutique</a>
+        <a href="lore.html">Lore</a>
+        <a href="wiki.html">Wiki</a>
+      </nav>
+    </header>
+
+    <main class="legal-content with-sidebar">
+      <div class="legal-hero">
+        <img class="hero-seal" src="logo.png" alt="" />
+        <h1 class="page-title small">Suivies RP</h1>
+        <p class="legal-date">Dark Medieval — Vampire RP V3</p>
+        <div class="hero-divider">
+          <span class="hero-divider-line"></span>
+          <span class="hero-divider-dot">✦</span>
+          <span class="hero-divider-line"></span>
+        </div>
+        <p class="legal-note">Règles, rolls, bonus et procédure des suivis RP.</p>
+      </div>
+
+      <div class="legal-layout">
+        <nav class="toc-sidebar toc-frame" aria-label="Sommaire">
+          <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="toc-body">
+            <span>Sommaire</span>
+            <svg class="toc-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="toc-body" id="toc-body">
+          <ul>
+            <li><a href="#procedure">Procédure</a></li>
+            <li><a href="#rolls">Les Rolls</a></li>
+            <li><a href="#touches">Touches &amp; États de santé</a></li>
+            <li><a href="#bonus">Bonus &amp; Malus</a></li>
+            <li><a href="#tiers">Tiers de combat</a></li>
+            <li><a href="#cooldowns">Cooldowns</a></li>
+            <li><a href="#hospitalier">Ordre Hospitalier</a></li>
+            <li><a href="#ck">Perte de WL (CK)</a></li>
+          </ul>
+          </div>
+        </nav>
+
+        <div class="legal-body parchment-panel">
+
+          <h2 id="procedure">Procédure</h2>
+          <p>
+            Quand vous ouvrez votre ticket, pour qu’il soit attribué à un narrateur compétent
+            vous devez indiquer en premier lieu les informations principales de votre
+            personnage (nom, grade, faction, spécialisation(s) s’il en a une, etc.) et
+            ensuite votre objectif.
+          </p>
+          <p><strong>Exemples :</strong></p>
+          <ul>
+            <li>« Je souhaite apprendre le premier niveau de médecine. »</li>
+            <li>« Je souhaite apprendre le sort basique : bille d’eau. »</li>
+            <li>« Je souhaite obtenir un boost de PV pour mon personnage Saint-Royaume. »</li>
+            <li>« Je souhaite obtenir un artefact permettant de… »</li>
+          </ul>
+          <p>
+            Avec ces informations, un narrateur vous sera attribué. Il pourra demander plus
+            d’informations HRP si nécessaire (accessibilité, difficulté, mises en garde).
+          </p>
+          <p>
+            Puis, de manière systématique, le narrateur vous enverra les règles élémentaires
+            des suivis RP et vous demandera d’écrire votre première narration pour initier le suivi.
+          </p>
+          <p><strong>Exemples de narration :</strong></p>
+          <ul>
+            <li>« Cornélius ira à la bibliothèque de Bucarest pour chercher des informations sur un artefact… »</li>
+            <li>« Karnak se rendra dans la rivière proche de l’académie des sorciers pour s’exercer à la magie de l’eau. »</li>
+            <li>« Soucoline essaiera de trouver le contact d’un entraîneur physique… »</li>
+          </ul>
+          <p>
+            Si vous vous aventurez à l’extérieur de votre base de faction, listez l’équipement
+            que vous possédez. Vous ne pouvez pas transporter plus d’équipements que ce que
+            vous êtes capable de transporter sur le serveur, avec une tolérance un peu plus élevée.
+          </p>
+          <p>
+            Si vous dites avoir quelque chose dans votre équipement, c’est que vous le possédez
+            dans votre coffre in-game. Un mensonge peut entraîner des sanctions (warn, hallucination,
+            annulation du suivi).
+          </p>
+          <p>
+            Privilégiez toujours les narrations d’actions ou de paroles. Les narrations de pensées
+            ne font pas avancer grand-chose, car le narrateur ne pourra pas y réagir.
+          </p>
+          <p>
+            Si vous souhaitez des informations contextuelles sur l’endroit où vous
+            êtes, vous pouvez demander à votre narrateur plus d’éléments. Suivant la
+            situation, il pourra vous indiquer ce que vous voyez ou entendez, mais
+            pourra aussi très bien vous demander de faire un <code>/roll</code>
+            pour évaluer votre perception de l’espace.
+          </p>
+
+          <h2 id="rolls">Les Rolls</h2>
+          <p>
+            Les rolls sont utilisés pour la majorité des actions (combat, discrétion, etc.).
+            <code>/roll</code> donne un résultat de 1 à 100.
+          </p>
+          <p><strong>Action qui n’implique que vous et l’environnement :</strong></p>
+          <ul>
+            <li><strong>1 à 5</strong> — échec critique</li>
+            <li><strong>6 à 50</strong> — échec</li>
+            <li><strong>51 à 95</strong> — réussite</li>
+            <li><strong>96 à 100</strong> — réussite critique</li>
+          </ul>
+          <p>
+            Si cela implique un autre personnage (PNJ ou joueur), c’est une bataille de rolls :
+            le plus élevé gagne. L’impact de la réussite ne change vraiment qu’en cas
+            d’échec ou de réussite critique.
+          </p>
+          <div class="rule-card rule-card--info">
+            <h4>Exemple — Bataille de rolls</h4>
+            <p style="margin-bottom:10px;">
+              <em>Salazar engage un bras de fer contre Cornélius au milieu de la taverne de Bucarest.</em>
+            </p>
+            <ul>
+              <li><strong>1 à 5 — échec critique :</strong> Salazar, voulant prouver sa valeur, essaie une technique connue de lui seul qui mène à un échec cuisant et se déboîte l’épaule au passage (−10 à tous les rolls impliquant son bras droit pendant 3 jours, jusqu’à la prise de soins).</li>
+              <li><strong>6 à 50 — échec :</strong> Salazar perd son bras de fer contre Cornélius.</li>
+              <li><strong>51 à 95 — réussite :</strong> Salazar remporte le bras de fer contre Cornélius.</li>
+              <li><strong>96 à 100 — réussite critique :</strong> Salazar remporte si rapidement son combat contre Cornélius qu’il se retrouve acclamé par la foule (+10 aux rolls de charisme s’il s’adresse à un personnage dans la taverne ou proche de celle-ci en tant que star locale pendant 3 jours).</li>
+            </ul>
+          </div>
+          <p>
+            Une action échouée au roll (hors combats purs) peut être retentée, mais avec un
+            résultat moindre et éventuellement un délai imposé par le narrateur.
+          </p>
+          <p>
+            Généralement, votre narrateur aura déjà réfléchi aux réactions suivant ce
+            que vous faites. Il va de soi qu’il faudra donc faire preuve de logique
+            et de réflexion pour ne pas qu’il vous arrive malheur en faisant des
+            actions insensées, car même si les rolls influencent une bonne partie de
+            votre suivi, si vous faites des actions illogiques et dénuées d’un
+            minimum de réflexion, vous en subirez les conséquences. À contrario, si
+            vous vous creusez la tête pour imaginer un plan et l’exécuter, vous
+            serez certainement récompensé pour cela.
+          </p>
+          <p>
+            Il ne faudra pas oublier que les rolls ne sont pas ultimes : si vous
+            cherchez un artefact permettant de tuer d’un coup un vampire dans la
+            bibliothèque du Saint-Royaume, peu importe votre roll, il y a de fortes
+            chances que vous ne trouviez rien, car il paraît évident que si un
+            artefact permettant cela devait se trouver ici, il serait déjà utilisé.
+          </p>
+          <p>
+            Au début de votre suivi, vous pourrez aussi demander le niveau de
+            difficulté de celui-ci. Ce sont des informations qui peuvent être
+            facilement connues en HRP et qui dépendent de votre grade, vos
+            connaissances, si vous avez des armes légendaires, le nombre de
+            personnes qui viennent, etc.
+          </p>
+          <p>
+            Vous êtes limités à un suivi RP profitant à votre personnage à la fois
+            (sauf si une autre personne en bénéficie aussi). Un CK sur un personnage
+            se répercute instantanément sur tous ses suivis.
+          </p>
+          <p>
+            L’or utilisé en suivi est retiré en actif in-game.
+            Le narrateur n’est pas là pour garantir votre survie ou votre réussite.
+          </p>
+
+          <h2 id="touches">Touches &amp; États de santé</h2>
+          <p>
+            Chaque état (Normal, Blessé, Très blessé, Semi-Critique, Critique) comporte
+            <strong>3 barres de vie</strong>. Pour mourir il faut donc passer :
+            Normal → Blessé− → Blessé → Blessé+ → … jusqu’à Mort.
+          </p>
+          <p>
+            Une touche sur un ennemi fait généralement <strong>2/3 d’état</strong>,
+            sauf en cas de différence majeure de tier.
+          </p>
+          <ul>
+            <li>Si vous avez 2 tiers de plus que votre ennemi → la touche fera 1/3 d’état</li>
+            <li>Si l’ennemi a 2 tiers de plus que vous → la touche fera 3/3 (un état complet)</li>
+          </ul>
+          <p><strong>À prendre aussi en compte :</strong></p>
+          <ul>
+            <li>Réussite critique contre un adversaire → +1/3 d’état supplémentaire</li>
+            <li>Échec critique de défense de l’adversaire → +1/3 d’état supplémentaire</li>
+            <li>Différence de rôle de votre attaque avec votre cible de −10 → −1/3 d’état</li>
+            <li>Réussite critique d’esquive ou de parade → +10 sur votre prochain roll d’attaque au corps à corps</li>
+          </ul>
+          <p>
+            Il est impossible de faire moins de 1/3 d’état avec une attaque touchée.
+            En cas de mort en critique++ (1 tier d’état en plus), une porte de sortie
+            peut être choisie par le narrateur. En critique+++ (2 tiers en plus), la mort est assurée.
+          </p>
+          <p><strong>Échelle d’état de santé :</strong></p>
+          <ul>
+            <li>Normal</li>
+            <li>Blessé</li>
+            <li>Très blessé</li>
+            <li>Semi-critique</li>
+            <li>Critique</li>
+            <li>Mort</li>
+          </ul>
+
+          <h2 id="bonus">Bonus &amp; Malus des Rolls</h2>
+          <p>
+            En fonction de votre rang et de votre faction ou race, vous obtenez des
+            bonus et malus qui s'appliquent directement sur vos rolls.
+          </p>
+
+          <h3>Avantages de Faction / Race</h3>
+          <ul class="bonus-grid">
+            <li><strong>Vampire</strong>+10 sur les rolls de régénération / soin et de déplacement.</li>
+            <li><strong>Saint Royaume</strong>+5 sur les rolls d'attaque.</li>
+            <li><strong>Nain</strong>+5 sur les rolls de blocage.</li>
+            <li><strong>Reptilien</strong>+5 sur les rolls d'intimidation.</li>
+            <li><strong>Sorcier</strong>+5 sur les rolls de recherche.</li>
+            <li><strong>Rat</strong>+10 sur les rolls de fuite.</li>
+            <li><strong>Chasseur</strong>+10 sur les rolls d'attaque à l'arbalète.</li>
+            <li><strong>Loup-Garou</strong>+10 sur les rolls de détection.</li>
+            <li><strong>Armée des Morts</strong>Échappe à la mort 1 fois toutes les 72h.</li>
+            <li><strong>Pirate</strong>+10 de persuasion sur les mensonges.</li>
+            <li><strong>Membre de l'École du Wing Chun</strong>+5 sur les rolls d'esquive.</li>
+            <li><strong>Membre de l'École des Assassins</strong>+10 sur les rolls d'attaque surprise / dans le dos.</li>
+            <li><strong>Membre de l'École des Samouraïs</strong>+25 sur le premier roll d'attaque, avec possibilité de charger une attaque (comme une arme à distance).</li>
+            <li><strong>Aventurier</strong>Point de bonus attribuable à l'une des 5 catégories de roll, obtenu à la fin de certains suivis dangereux ou apportant un gain intéressant à la Guilde.</li>
+          </ul>
+
+          <h3>Bonus liés aux Dynasties / Maisons</h3>
+          <p>
+            Être membre d'une Dynastie ou d'une Maison expéditionnaire confère des
+            bonus croissants selon son rang.
+          </p>
+          <div class="rank-table-wrap">
+            <table class="rank-table">
+              <thead>
+                <tr>
+                  <th>Rang de la Maison</th>
+                  <th>Vampire</th>
+                  <th>Saint Royaume</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Émergente</td>
+                  <td>+1 attaque / +1 détection / +1 charisme</td>
+                  <td>+1 parade et esquive / +1 physique / +1 charisme</td>
+                </tr>
+                <tr>
+                  <td>Mineure</td>
+                  <td>+2 attaque / +2 détection / +2 charisme</td>
+                  <td>+2 parade et esquive / +2 physique / +2 charisme</td>
+                </tr>
+                <tr>
+                  <td>Établie</td>
+                  <td>+3 attaque / +3 détection / +3 charisme</td>
+                  <td>+3 parade et esquive / +3 physique / +3 charisme</td>
+                </tr>
+                <tr>
+                  <td>Majeure</td>
+                  <td>+5 attaque / +5 détection / +5 charisme</td>
+                  <td>+5 parade et esquive / +5 physique / +5 charisme</td>
+                </tr>
+                <tr>
+                  <td>Légendaire</td>
+                  <td>+10 attaque / +10 détection / +10 charisme</td>
+                  <td>+10 parade et esquive / +10 physique / +10 charisme</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Dynastie Belmont</strong> — +5 de parade et esquive, +5 de
+            Physique et +5 de Charisme, quel que soit le rang de la Maison.
+          </p>
+
+          <h2 id="tiers">Tiers de Combat</h2>
+          <p>
+            Chaque personnage appartient à un tier de puissance selon son rang, sa
+            faction ou son statut. Cet écart de tier module les rolls d'attaque, de
+            défense et d'esquive lors d'un affrontement.
+          </p>
+
+          <h3>Répartition des rangs par tier</h3>
+          <div class="rank-table-wrap">
+            <table class="rank-table">
+              <thead>
+                <tr>
+                  <th>Tier</th>
+                  <th>Rangs concernés</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tier I</td>
+                  <td>Nouveau-Né / Jeune Vampire / Vampire / Aîné · Recrue / Recrue Éprouvée / Fantassin / Fantassin Lourd · Banquier / Employé / Aventurier de Rang D et C · Rang 1 et 2 des Clans · Néophyte / Apprenti Sorcier · Job Civil (villageois, bouffon, etc.)</td>
+                </tr>
+                <tr>
+                  <td>Tier II</td>
+                  <td>Doyen / Aguerri / Vétéran / Loup Funeste · Homme d'Arme / Maître d'Arme / Sergent / Chien Traqueur · Aventurier de Rang B · Rang 3 des Clans / Érudit · Créature Reptilienne (si petite, sinon Tier III) · Job VIP (Ogre, Aigle Géant, etc. — tier modifiable si le personnage a des artefacts ou bonus liés à ses suivis)</td>
+                </tr>
+                <tr>
+                  <td>Tier III</td>
+                  <td>Éminent / Émérite / Élite · Lieutenant / Capitaine / Commandant · Aventurier de Rang A · Rang 4 des Clans / Grand Érudit / Rat Ogre / Écorcheur · Wyverne (dépend de sa taille, sinon Tier IV)</td>
+                </tr>
+                <tr>
+                  <td>Tier IV</td>
+                  <td>Baron / Vicomte / Comte / Duc / Manticore · Prêcheur / Clerc d'Arme / Paladin / Paladin Sacré · Écuyer / Chevalier d'Arme / Chevalier Lige / Chevalier Royal / Griffon Sacré · Aventurier de Rang S / Maître de la Guilde et Héros (peut monter en Tier V selon les suivis et la progression du personnage) · Chef de Clan / Maître Sorcier / Maîtres d'École</td>
+                </tr>
+                <tr>
+                  <td>Tier V</td>
+                  <td>Seigneur / Haut Seigneur / Sanguinarque / Originel · Inquisiteur / Maître de l'Inquisition · Général / Sénéchal · Garde Royal / Chevalier Noir · Archimage</td>
+                </tr>
+                <tr>
+                  <td>Tier VI</td>
+                  <td>Précurseur / Main de la Nuit · Gardien des Reliques / Maréchal / Archonte</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Catégories d'adversaires (PNJ)</h3>
+          <ul>
+            <li><strong>Catégorie I</strong> — Adversaire faible (gobelin de bas rang, squelette, etc.), apparaît pour des suivis de faible difficulté ou quand le roll de découverte est entre 76 et 100.</li>
+            <li><strong>Catégorie II</strong> — Adversaire moyen, apparaît pour des suivis à difficulté standard ou quand le roll de découverte est entre 51 et 75.</li>
+            <li><strong>Catégorie III</strong> — Adversaire coriace, apparaît généralement pour des suivis gourmands mais pas trop, ou quand un roll de déplacement / découverte est négatif (21 à 50).</li>
+            <li><strong>Catégorie IV</strong> — Adversaire puissant, apparaît pour des suivis avec des récompenses alléchantes ou quand un roll de déplacement / découverte est très mauvais (6 à 20).</li>
+            <li><strong>Catégorie V</strong> — Adversaire redoutable, apparaît pour de gros suivis ou quand un roll de déplacement / découverte est un échec critique (0 à 5).</li>
+            <li><strong>Catégorie VI</strong> — Suivi unique.</li>
+          </ul>
+
+          <h3>Écarts de tier — effet sur les rolls</h3>
+          <p>
+            L'écart entre votre tier et celui de votre adversaire détermine
+            l'avantage de roll accordé au camp le plus puissant, aussi bien à
+            l'attaque qu'à la défense / esquive :
+          </p>
+          <div class="tier-legend">
+            <span><i style="background:#14140f"></i>Tiers égaux — aucun effet</span>
+            <span><i style="background:#3f7d3a"></i>+1 tier — Bonus de +5 / −5 pour l'adversaire</span>
+            <span><i style="background:#2f5f8f"></i>+2 tiers ou plus — Bonus de +10 / −10 pour l'adversaire</span>
+            <span><i style="background:#b5722a"></i>−1 tier — Malus de −5 / +5 pour l'adversaire</span>
+            <span><i style="background:#a4342a"></i>−2 tiers ou moins — Malus de −10 / +10 pour l'adversaire</span>
+          </div>
+          <div class="tier-matrix-wrap">
+            <table class="tier-matrix">
+              <thead>
+                <tr>
+                  <th>Vous \ Adversaire</th>
+                  <th>Tier I</th>
+                  <th>Tier II</th>
+                  <th>Tier III</th>
+                  <th>Tier IV</th>
+                  <th>Tier V</th>
+                  <th>Tier VI</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tier I</td>
+                  <td class="tm-none">—</td>
+                  <td class="tm-malus1">−5 / +5</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                </tr>
+                <tr>
+                  <td>Tier II</td>
+                  <td class="tm-bonus1">+5 / −5</td>
+                  <td class="tm-none">—</td>
+                  <td class="tm-malus1">−5 / +5</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                </tr>
+                <tr>
+                  <td>Tier III</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus1">+5 / −5</td>
+                  <td class="tm-none">—</td>
+                  <td class="tm-malus1">−5 / +5</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                </tr>
+                <tr>
+                  <td>Tier IV</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus1">+5 / −5</td>
+                  <td class="tm-none">—</td>
+                  <td class="tm-malus1">−5 / +5</td>
+                  <td class="tm-malus2">−10 / +10</td>
+                </tr>
+                <tr>
+                  <td>Tier V</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus1">+5 / −5</td>
+                  <td class="tm-none">—</td>
+                  <td class="tm-malus1">−5 / +5</td>
+                </tr>
+                <tr>
+                  <td>Tier VI</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus2">+10 / −10</td>
+                  <td class="tm-bonus1">+5 / −5</td>
+                  <td class="tm-none">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Attention :</strong> en cas d'échec critique, les bonus ne
+            s'additionnent pas.
+          </p>
+
+          <h2 id="cooldowns">Cooldowns</h2>
+          <p>
+            Temps de recharge (en nombre de tours, sauf mention contraire) des
+            différentes lignées et pouvoirs actifs utilisés en suivi RP :
+          </p>
+          <ul class="bonus-grid">
+            <li><strong>Lignée</strong>15 tours</li>
+            <li><strong>Lignée Ultime</strong>25 tours</li>
+            <li><strong>Transfusion</strong>5 tours</li>
+            <li><strong>Crucifix / Aveuglement / Régénération Personnel</strong>15 tours</li>
+            <li><strong>Bénédiction du Roi / Obsessions</strong>20 tours</li>
+            <li><strong>Prière de Vitalité / Balise</strong>25 tours</li>
+            <li><strong>Prière de Régénération / Régénération Vampirique</strong>Après chaque combat</li>
+            <li><strong>Coup de Pied dans le sol (Précurseur) et E des griffes</strong>10 tours</li>
+            <li><strong>Actif Épée en Or Noir</strong>20 tours</li>
+          </ul>
+
+          <h2 id="hospitalier">Ordre Hospitalier — La Médecine</h2>
+          <p>
+            Pour monter en rang, il faut progresser dans la hiérarchie de l'Ordre
+            des Hospitaliers au travers de vos suivis RP (indépendamment de ce qui
+            est raconté historiquement dans le lore du serveur). Chaque montée en
+            rang exige de remplir un objectif précis ; en cas d'échec (mort du
+            patient ou erreur grave), un cooldown s'applique avant de pouvoir
+            retenter avec un nouveau patient — sa durée dépend du rang visé.
+          </p>
+
+          <div class="rule-card rule-card--danger">
+            <h4>Objectifs de progression</h4>
+            <ul>
+              <li><strong>Initié</strong> — Soigner une blessure peu grave (coupure, blessure superficielle, etc.) de 2 individus en respectant l'hygiène et les règles de base de la médecine. <em>(1h en cas d'échec)</em></li>
+              <li><strong>Novice</strong> — Réaliser les soins sur une plaie ouverte de 2 individus (flèche, chair tranchée par une épée, etc.). <em>(3h en cas d'échec)</em></li>
+              <li><strong>Hospitalier Apprenti</strong> — Réaliser la stabilisation de 2 individus atteints d'une maladie (fièvre ou autres) aggravée, en respectant les conseils et la demande d'un Grand Hospitalier (s'il y en a un, sinon il le fera seul). <em>(12h en cas d'échec)</em></li>
+              <li><strong>Frère Hospitalier</strong> — Réaliser une amputation sur 2 individus. <em>(1 jour en cas d'échec)</em></li>
+              <li><strong>Grand Hospitalier</strong> — Réussir la formation de 3 Hospitaliers Apprentis. <em>(2 jours en cas d'échec)</em></li>
+              <li><strong>Hospitalier en Chef</strong> — Soigner une altération d'état (folie, paralysie, fièvre noire ou autres). <em>(3 jours en cas d'échec)</em></li>
+              <li><strong>Maître Hospitalier</strong> — Soigner une quintuple altération d'état. <em>(1 semaine en cas d'échec)</em></li>
+              <li><strong>Grand Maître Hospitalier</strong> — Gérer une épidémie d'un village (peste, empoisonnement d'un fleuve ou autres).</li>
+            </ul>
+          </div>
+
+          <h3>Boost de roll lié aux bandages</h3>
+          <p>Selon votre rang dans l'Ordre, vous bénéficiez d'un bonus de roll lors de l'utilisation de bandages :</p>
+          <div class="rank-table-wrap">
+            <table class="rank-table">
+              <thead>
+                <tr><th>Rang</th><th>Bonus de roll</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Initié</td><td>+0</td></tr>
+                <tr><td>Novice</td><td>+2</td></tr>
+                <tr><td>Hospitalier Apprenti</td><td>+4</td></tr>
+                <tr><td>Frère Hospitalier</td><td>+6</td></tr>
+                <tr><td>Grand Hospitalier</td><td>+8</td></tr>
+                <tr><td>Hospitalier en Chef</td><td>+10</td></tr>
+                <tr><td>Maître Hospitalier</td><td>+15</td></tr>
+                <tr><td>Grand Maître Hospitalier</td><td>+20</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Nombre de soins possibles par suivi, hors zone Safe</h3>
+          <p>
+            Il est possible d'en avoir davantage si vous achetez du matériel
+            médical avant de partir en expédition. Si le roll de soin est raté,
+            vous perdez quand même votre bandage. Hors combat, il est possible de
+            spam ses bandages sur un seul individu.
+          </p>
+          <div class="rank-table-wrap">
+            <table class="rank-table">
+              <thead>
+                <tr><th>Rang</th><th>Soins disponibles</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Initié Hospitalier</td><td>5</td></tr>
+                <tr><td>Novice Hospitalier</td><td>6</td></tr>
+                <tr><td>Apprenti Hospitalier</td><td>7</td></tr>
+                <tr><td>Frère Hospitalier</td><td>8</td></tr>
+                <tr><td>Grand Hospitalier</td><td>9</td></tr>
+                <tr><td>Hospitalier en Chef</td><td>10</td></tr>
+                <tr><td>Maître Hospitalier</td><td>15</td></tr>
+                <tr><td>Grand Maître Hospitalier</td><td>20</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 id="ck">Perte de White List en cas de CK</h2>
+          <p class="ck-warning">Perte de White List en cas de CK (Character Kill — mort définitive du personnage)</p>
+          <p>
+            Selon le rang détenu par le personnage au moment de son CK, la
+            sanction ne se traduit pas systématiquement par un retrait total de la
+            White List : elle peut aussi se limiter à une rétrogradation.
+          </p>
+          <div class="rank-table-wrap">
+            <table class="rank-table">
+              <thead>
+                <tr><th>Rang au moment du CK</th><th>Conséquence</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Baron à Duc</td><td>Retour à Vampire d'Élite</td></tr>
+                <tr><td>Seigneur à Précurseur</td><td>Retour à Baron</td></tr>
+                <tr><td>Écuyer / Prêcheur à Chevalier Royal / Paladin Sacré</td><td>Retour à Commandant</td></tr>
+                <tr><td>Général / Inquisiteur à Maréchal / Gardien des Reliques</td><td>Retour à Chevalier d'Arme</td></tr>
+                <tr><td>Chevalier Noir / Garde Royal</td><td>Retour à Chevalier d'Arme</td></tr>
+                <tr><td>Sanguinarque / Vampire Originel</td><td>Retour à Baron</td></tr>
+                <tr><td>Loup Funeste / Manticore et Léviathan / Chien Traqueur / Griffon Sacré et Patriarche</td><td>Retrait de la White List</td></tr>
+                <tr><td>Chef de Clan</td><td>Retrait de toutes les White List du Clan</td></tr>
+                <tr><td>Membre du Clan</td><td>Retrait de la White List, retour au rang précédent</td></tr>
+                <tr><td>Sorcier</td><td>Perte des 3 derniers sorts appris</td></tr>
+                <tr><td>Érudit</td><td>Retour à la White List Sorcier / retrait des sorts au-dessus de ce rang</td></tr>
+                <tr><td>Grand Érudit / Maître / Archimage</td><td>Retour à la White List Érudit / retrait des sorts au-dessus de ce rang</td></tr>
+                <tr><td>Chasseur</td><td>Rétrogradation au rang précédent et reset de la renommée actuelle</td></tr>
+                <tr><td>Aventurier de Rang D, C, B et A</td><td>Perte de toute la prouesse liée au personnage</td></tr>
+                <tr><td>Aventurier de Rang S et Héros</td><td>Retour au Rang A</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Lien utiles</h4>
+            <a href="https://discord.gg/UvqNCvHMnk" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="ts3server://94.250.223.28:15071">TeamSpeak</a>
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer">Workshop</a>
+          </div>
+          <div class="footer-col">
+            <h4>Mentions Légales</h4>
+            <a href="cgu.html">Conditions générales d'utilisation</a>
+            <a href="cgv.html">Conditions générales de vente</a>
+          </div>
+        </div>
+        <p class="footer-copy">© 2026 Vampire RP V3 — Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

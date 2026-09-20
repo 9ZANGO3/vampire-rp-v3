@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Règlement officiel du serveur Vampire RP V3.">
+    <title>Règlement — Vampire RP V3</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
+                    <img src="logo.png" alt="Logo Vampire RP V3">
+                </a>
+
+                <a href="https://discord.gg/UvqNCvHMnk"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="brand-mark discord-mark"
+                   aria-label="Rejoindre le Discord du serveur">
+                    <svg class="discord-svg" viewBox="0 0 127.14 96.36" role="img" aria-label="Logo Discord du serveur"><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+                </a>
+
+                <a href="ts3server://94.250.223.28:15071"
+                   class="brand-mark teamspeak-mark"
+                   aria-label="Rejoindre le TeamSpeak du serveur">
+                    <div class="teamspeak-icon" role="img" aria-label="Logo TeamSpeak"></div>
+                </a>
+            </div>
+
+            <nav class="main-nav" aria-label="Navigation principale">
+                <a href="reglement.html" class="nav-link active" aria-current="page">Règlement</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer" class="nav-link">Workshop</a>
+                <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer" class="nav-link">Boutique</a>
+                <a href="lore.html" class="nav-link">Lore</a>
+                <a href="wiki.html" class="nav-link">Wiki</a>
+            </nav>
+
+            <div class="header-right">
+                <div id="auth-button" class="auth-button">
+                    <!-- Le JavaScript va remplir ça -->
+                </div>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+            <a href="reglement.html" class="active" aria-current="page">Règlement</a>
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer">Workshop</a>
+            <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer">Boutique</a>
+            <a href="lore.html">Lore</a>
+            <a href="wiki.html">Wiki</a>
+        </nav>
+    </header>
+
+    <main class="legal-content with-sidebar">
+        <div class="legal-hero">
+            <img src="logo.png" class="hero-seal" alt="" aria-hidden="true">
+            <h1 class="page-title small">Règlement</h1>
+            <p class="legal-date">Dark Medieval — Vampire RP V3</p>
+            <div class="hero-divider" aria-hidden="true">
+                <span class="hero-divider-line"></span>
+                <span class="hero-divider-dot">◆</span>
+                <span class="hero-divider-line"></span>
+            </div>
+            <p class="legal-note">Se connecter au serveur vaut acceptation pleine du règlement ci-dessous.</p>
+        </div>
+
+        <div class="legal-layout">
+            <aside class="toc-sidebar toc-frame" aria-label="Sommaire du règlement">
+                <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="toc-body">
+                    <span>Sommaire</span>
+                    <svg class="toc-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="toc-body" id="toc-body">
+                <ul>
+                    <li><a href="#base">🔸 Règles de base</a></li>
+                    <li><a href="#meroll">🎭 /me et /roll</a></li>
+                    <li><a href="#painfear">😱 Pain RP / Fear RP</a></li>
+                    <li><a href="#combat">⚔️ Règles de combat</a></li>
+                    <li><a href="#faction">⚖️ Règlement des factions</a></li>
+                    <li><a href="#divers">🧩 Divers</a></li>
+                </ul>
+                </div>
+            </aside>
+
+            <div class="legal-body parchment-panel">
+
+        <h2 id="base">🔸 Règles de base</h2>
+        <ul>
+            <li class="lettrine">Il est interdit de PropKill / Propblock / PropSurf en <strong>toute</strong> circonstance.</li>
+            <li>Le HRP vocal est interdit sans la présence d'un Administrateur.</li>
+            <li>Le FreeKill est interdit (tuer sans raison valable).</li>
+            <li>Interdiction de faire du NLR Zone / Job / Action (revenir sur le lieu de mort ou reprendre son job avant 5 minutes, ou avant que l'action ne soit terminée).</li>
+            <li>Le troll, sous toutes ses formes, est sanctionnable.</li>
+            <li>Le Win RP et le MetaGaming sont interdits.</li>
+            <li>Les jeux de mots sont interdits dans les noms RP.</li>
+            <li>Le RP sur TeamSpeak ou Discord est interdit (sauf canaux roleplay dédiés).</li>
+            <li>Merci d'être le plus fair-play possible.</li>
+            <li>Le favoritisme, sous toutes ses formes, est interdit.</li>
+        </ul>
+
+        <h2 id="meroll">🎭 /me et /roll</h2>
+        <p>Deux cas de figure :</p>
+        <ul>
+            <li>Si l'action RP implique 2 joueurs ou plus : le <strong>/roll</strong> du premier doit être supérieur à celui du second.</li>
+            <li>Si l'action vise un objet ou une réalisation matérielle : le roll doit être <strong>supérieur ou égal à 50</strong> pour réussir.</li>
+        </ul>
+        <ul>
+            <li>⚠️ Pour faire un /me "met sa lame sous la gorge", l'arme doit être sortie depuis au moins 3 secondes.</li>
+            <li>⚠️ Il faut attendre un minimum de 5 minutes avant de pouvoir retenter une même action par /me ou /roll.</li>
+        </ul>
+
+        <h2 id="painfear">😱 Pain RP / Fear RP</h2>
+        <ul>
+            <li>Les jobs Skeleton, Fou de la mine et Protecteur de la forêt ne sont pas soumis aux règles de Pain RP et Fear RP.</li>
+            <li>Attaquer à mains nues un ennemi armé, un monstre ou toute autre créature dangereuse est considéré comme du No Fear RP.</li>
+            <li>Il est interdit de se battre en dessous de 15 HP.</li>
+            <li>Le feu, ça brûle — mais plus vous avez de vie, plus vous êtes résistant. Par exemple, un villageois touché par une boule de feu doit fuir, alors qu'un Aventurier de Rang S n'y est pas obligé (sinon les sorts de feu seraient trop puissants face à leur lanceur). Attention tout de même au Pain RP lié aux flammes.</li>
+        </ul>
+
+        <h2 id="combat">⚔️ Règles de combat</h2>
+        <ul>
+            <li>Interdiction de manger ou de se soigner via un PNJ / coffre en combat. Seules les potions et sweps de combat dédiés sont autorisés.</li>
+            <li>Un combat commence dès qu'une attaque est lancée (même sans dégâts infligés) sur autrui, à une portée relative à l'arme utilisée.</li>
+            <li>L'utilisation de l'étranglement est interdite en combat. Étrangler quelqu'un déclenche un combat si la cible a la volonté de se battre.</li>
+            <li>Il est interdit de ranger une arme dans son coffre durant un combat.</li>
+            <li>Il est interdit d'être invisible pour capturer un point stratégique ou économique.</li>
+            <li>Il est interdit d'être invisible pour couper du bois, miner ou attaquer autrui (hormis via le "feindre la mort" ou les lignées — valable uniquement pour l'attaque, pas le farm).</li>
+            <li>Il est interdit de devenir invisible en combat (hormis via le "feindre la mort", le hidding charm ou les lignées).</li>
+            <li>Il est interdit d'attaquer un membre d'une faction sur son propre point stratégique (vous pouvez taper en reculant ou si vous êtes bloqué), si ce point lui appartient déjà (logique de garnison). Pour les factions ennemies, il est interdit de traverser l'un des points concernés.</li>
+            <li>En cas de bataille devant une safe zone (base), les attaquants peuvent viser les membres visibles à l'intérieur via des projectiles. Dans le cas contraire, il est interdit d'attaquer des ennemis dans leur base si eux-mêmes n'ont pas initié l'attaque.</li>
+            <li>Il est interdit d'entrer dans une base non-alliée durant un combat (guilde comprise), sauf autorisation via un rang de groupe ou d'aventurier.</li>
+            <li>Les captures en combat sont autorisées, mais uniquement sur :
+                <ul>
+                    <li>des cibles prioritaires (haut gradé, ou cible liée à une vengeance ou autre raison RP) ;</li>
+                    <li>un individu encore vivant à la fin de la bataille / du combat.</li>
+                </ul>
+            </li>
+            <li>Chercher à capturer tout le monde dès le début d'un combat entraînera l'annulation (void) des captures concernées.</li>
+        </ul>
+
+        <h2 id="faction">⚖️ Règlement des factions</h2>
+
+        <h3>🏹 Règle générale</h3>
+        <ul>
+            <li>Les armes et tenues de job doivent être reconnaissables.</li>
+            <li>Un minimum de 5 joueurs est requis pour capturer un point stratégique ou économique.</li>
+            <li>Si vous êtes repéré en infiltration, il y a un risque de CK.</li>
+            <li>Le tir est autorisé depuis les murailles ou avant-postes en bataille, même en cas d'arrivée récente.</li>
+            <li>Interdiction de ressortir d'une safe zone (base) en pleine bataille : une fois entré, vous devez y rester jusqu'à la fin (vous pouvez toujours défendre à distance).</li>
+        </ul>
+
+        <h3>🗺️ Ordre et règle des points stratégiques</h3>
+        <p><strong>Pour les Vampires :</strong></p>
+        <ul>
+            <li>Basse Ville Vampirique → Place du Contremaître → Fort du Haut Marais</li>
+            <li>Cimetière des Damnés → Quartier Commercial de Babadag → Ancienne Forge Naine</li>
+            <li>Laboratoire Belmont → Place Forte → Village des Louis</li>
+        </ul>
+        <p><strong>Pour le Saint-Royaume :</strong> le sens inverse.</p>
+        <p><strong>Autres points économiques :</strong></p>
+        <ul>
+            <li>Scierie</li>
+            <li>Mine</li>
+            <li>Camp du Pêcheur</li>
+        </ul>
+        <ul>
+            <li>Les clans doivent capturer le point le plus proche de chez eux, puis suivre l'ordre dans un sens ou dans l'autre.</li>
+            <li>Les points économiques peuvent être capturés sans respecter l'ordre des points.</li>
+            <li>Il est interdit de fortifier un point stratégique en utilisant des props hors marteau de fortification.</li>
+        </ul>
+
+        <h3>✝️ Saint-Royaume / Église</h3>
+        <ul>
+            <li>Vous devez craindre la nuit.</li>
+        </ul>
+
+        <h3>🧛 Vampire</h3>
+        <ul>
+            <li>Il est obligatoire de se nourrir uniquement de sang ou de corps.</li>
+            <li>Les Sang-Purs sont très sensibles au divin : interdiction d'entrer dans les églises et cathédrales.</li>
+            <li>Voler avec un swep de vol est interdit, sauf en forme de chauve-souris, transformation Sang-Pur, ou invisibilité parfaite.</li>
+            <li>Seuls les Sang-Purs peuvent voler en étant invisibles (il faut néanmoins être en forme de vol : chauve-souris ou transformation Sang-Pur).</li>
+            <li>Vous craignez le sacré.</li>
+            <li>Interdiction de se transformer en rat pendant un combat.</li>
+            <li>Ne pas abuser de la petite taille du rat (fair-play).</li>
+            <li>Il est interdit d'utiliser le swep "Boire le sang" en combat.</li>
+            <li>Seuls les vampires peuvent dompter une gargouille.</li>
+        </ul>
+
+        <h3>🏛 Guilde</h3>
+        <ul>
+            <li>Le banquier ne peut pas utiliser l'or récolté par sa profession pour d'autres personnages.</li>
+            <li>Le banquier ne peut pas ajouter ou retirer de l'or d'un compte sans raison RP valable.</li>
+        </ul>
+
+        <h3>🧙 Sorcier</h3>
+        <ul>
+            <li>Arme autorisée : dague ou sceptre uniquement (hormis via certains suivis possibles).</li>
+            <li>S'équiper d'un bouclier est interdit.</li>
+        </ul>
+
+        <h3>🐺 Loup-Garou</h3>
+        <ul>
+            <li>Interdiction de porter une armure ou une tenue après sa transformation.</li>
+            <li>Les loups-garous craignent l'argent.</li>
+            <li>Pas de transformation en ville sans raison légitime (grand danger).</li>
+            <li>Ne peut attaquer pour se nourrir que la nuit.</li>
+            <li>Une fois transformé, seuls les autres lycanthropes également transformés peuvent vous comprendre. Pour préserver l'immersion, privilégiez la communication à l'écart des autres joueurs ou via /w (chuchotement) plutôt qu'en public.</li>
+            <li>Le loup albinos chasse principalement les loups ; il n'attaque pas les hommes sans raison.</li>
+        </ul>
+
+        <h2 id="divers">🧩 Divers</h2>
+
+        <h3>☠️ CK / Revive</h3>
+        <ul>
+            <li>Les demandes de CK se font via ticket sur le Discord de Vampire RP. Elles sont traitées uniquement par la Gérance, au plus vite, afin d'éviter toute fuite.</li>
+            <li>Un Revive est envisageable selon la logique et les conséquences de la mort, uniquement si le personnage peut apporter un bon nombre de scènes liées.</li>
+        </ul>
+
+        <h3>🏰 Mass RP</h3>
+        <ul>
+            <li>Si le Mass RP est actif sur une zone, cela suppose la présence de PNJ même sans joueurs : les actions que vous n'auriez pas faites en présence d'autres joueurs ne doivent pas être faites dans ces lieux.</li>
+            <li>Il peut être assoupli pour des événements spéciaux (par exemple, une réunion de faction peut justifier moins de gardes présents).</li>
+            <li>⚠️ Mourir hors assaut dans une base ennemie peut mener à un CK.</li>
+            <li>Interdiction d'être invisible dans une base ennemie.</li>
+            <li>La Cité de Babadag est une zone particulière : le Mass RP y est total uniquement dans le socle principal et sur les murailles. Autour, il ne s'applique que si au moins 3 aventuriers sont présents sur zone.</li>
+            <li><strong>Zones à Mass RP élevé :</strong> Cité de Babadag / Manoir Victoria / Château de Vladeni.</li>
+            <li><strong>Zones à Mass RP :</strong> Base de clan / École.</li>
+        </ul>
+
+        <h3>🐾 En job Animal</h3>
+        <ul>
+            <li>Pas de craft ni de quêtes inadaptées.</li>
+            <li>Interdiction de parler (à l'oral comme à l'écrit).</li>
+            <li>Interdiction d'attaquer un groupe plus nombreux (sauf pour se défendre).</li>
+            <li>Interdiction d'entrer dans une ville en étant sauvage.</li>
+        </ul>
+
+        <h3>💀 Armée des Morts</h3>
+        <ul>
+            <li>Pour lancer un assaut sur une base de faction ou de clan, il faut : 5 joueurs, posséder l'intégralité des points stratégiques de la zone visée, et effectuer une NA.</li>
+            <li>Après un assaut, le suivant doit attendre au minimum 20 minutes (à partir de la fin de l'assaut en cours).</li>
+            <li>Tous doivent se soumettre à l'autorité du Seigneur des Cryptes.</li>
+            <li>Il est interdit de parler dans le job Skeleton.</li>
+            <li>Le Skeleton peut attaquer qui il veut, quand il veut et où il veut.</li>
+            <li>Il est interdit d'attaquer deux fois d'affilée la même zone en Skeleton (30 minutes minimum entre chaque).</li>
+        </ul>
+
+        <h3>🧾 Autres règles</h3>
+        <ul>
+            <li>Voler un autre joueur en étant invisible est interdit.</li>
+            <li>Le swep pickpocket est interdit sur les joueurs AFK ou armés (arme en main).</li>
+            <li>Il est interdit de menotter un individu :
+                <ul>
+                    <li>qui est armé (arme en main) ;</li>
+                    <li>qui court ;</li>
+                    <li>qui ne se rend pas (nécessite /me ou /roll s'il est hostile).</li>
+                </ul>
+            </li>
+            <li>Retourner au spawn en pleine action RP est interdit.</li>
+            <li>Le Tavernier doit toujours rester en ville (sauf si un collègue y est déjà présent, auquel cas il peut effectuer des livraisons).</li>
+            <li>Utiliser le terrain d'entraînement pour se soigner est sanctionnable.</li>
+            <li>Les scènes ou actions héroïques (forte infériorité numérique ou de puissance, No Fear RP) sont autorisées, mais entraîneront un CK si le joueur tombe seul durant ce combat.</li>
+            <li>Les montures (Manticore / Griffon) n'ont pas le droit d'attraper des joueurs en combat ou armés.</li>
+            <li>Maximum 1 propriété par joueur.</li>
+            <li>Il est interdit pour une monture de porter plus d'une personne sur le dos (2 personnes pour les manticores vampiriques et les griffons).</li>
+            <li>En tant qu'enfant, seules les dagues sont autorisées comme armement.</li>
+            <li>La pioche et la hache sont considérées comme des armes.</li>
+            <li>Merci de faire preuve de logique RP en évitant de farmer des ressources avec un autre personnage pour esquiver des conséquences RP (ex : aller en job villageois pour récupérer des ressources destinées à son job de faction).</li>
+            <li>Il est interdit au Fou de la mine de sortir de la mine (sauf sous le pont), et il ne doit pas ignorer quelqu'un qui frappe un minerai devant lui.</li>
+            <li>Il est interdit à la Créature de la mine de sortir de la mine ou d'attaquer un Fou de la mine.</li>
+            <li>Utiliser un coffre pour regagner des flèches ou des munitions d'arme de jet sera sévèrement sanctionné.</li>
+            <li>Le Protecteur de la forêt n'attaque que pour se défendre lui-même ou pour protéger la végétation (principalement les arbres).</li>
+            <li>Lorsque vous mourez, vous oubliez les souvenirs de la scène en cours.</li>
+            <li>Attaquer une armée seul, à deux ou à trois sous prétexte d'être un haut gradé bien équipé capable de tuer plusieurs adversaires sans réaliser d'objectif réel (capture, sauvetage...) est interdit et contraire au fair-play.</li>
+            <li>Interdiction de :
+                <ul>
+                    <li>forcer une trappe, un mur ou une herse avec un swep pour ouvrir une porte ;</li>
+                    <li>farmer en étant invisible ;</li>
+                    <li>changer de job pour déposer des ressources ou de l'or.</li>
+                </ul>
+            </li>
+            <li>Un assaut de faction nécessite : un casus belli, un nombre équitable de joueurs, l'accord de la gérance, et la possession de l'ensemble des points stratégiques.</li>
+            <li>Il est interdit de faire apparaître un cheval hors de sa base de faction (de préférence en l'absence de joueurs autour).</li>
+            <li>En cas de prise d'une base de faction ennemie où l'objectif n'est pas la prise de la base elle-même (valable pour les clans uniquement) : si la faction attaquante est victorieuse, elle remporte, en plus de son objectif, une récompense selon le nombre de survivants :
+                <ul>
+                    <li>0 à 5 survivants = 15 000 or</li>
+                    <li>5 à 10 survivants = 20 000 or</li>
+                    <li>10 à 15 survivants = 25 000 or</li>
+                    <li>15 à 20 survivants = 30 000 or</li>
+                </ul>
+                Ainsi qu'une pièce détruite de manière aléatoire.
+            </li>
+        </ul>
+
+        <h3>Casus Belli reconnus</h3>
+        <ul>
+            <li>Une relique de faction volée</li>
+            <li>Un CK d'un membre important de la faction</li>
+            <li>Une arme mythique liée (temps + impact) à un joueur de la faction, tombée</li>
+            <li>Un refus de négocier de la part d'un très haut gradé ou d'un membre de la famille royale</li>
+        </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Lien utiles</h4>
+                <a href="https://discord.gg/UvqNCvHMnk" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="ts3server://94.250.223.28:15071">TeamSpeak</a>
+                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer">Workshop</a>
+            </div>
+
+
+
+            <div class="footer-col">
+                <h4>Mentions Légales</h4>
+                <a href="cgu.html">Conditions générales d'utilisation</a>
+                <a href="cgv.html">Conditions générales de vente</a>
+            </div>
+        </div>
+
+        <p class="footer-copy">© 2026 Vampire RP V3 — Tous droits réservés</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

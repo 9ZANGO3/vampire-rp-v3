@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Informations serveur Vampire RP V3 — Lignées, niveaux, incursions, glyphes." />
+    <title>Infos Serveur — Vampire RP V3</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a href="index.html" class="logo-home" aria-label="Retour à l'accueil">
+            <img src="logo.png" alt="Logo Vampire RP V3" />
+          </a>
+          <a href="https://discord.gg/UvqNCvHMnk" target="_blank" rel="noopener noreferrer" class="brand-mark discord-mark" aria-label="Rejoindre le Discord">
+            <svg class="discord-svg" viewBox="0 0 127.14 96.36" role="img">
+              <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+            </svg>
+          </a>
+          <a href="ts3server://94.250.223.28:15071" class="brand-mark teamspeak-mark" aria-label="TeamSpeak">
+            <div class="teamspeak-icon" role="img" aria-label="Logo TeamSpeak"></div>
+          </a>
+        </div>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <a href="reglement.html" class="nav-link">Règlement</a>
+          <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer" class="nav-link">Workshop</a>
+          <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer" class="nav-link">Boutique</a>
+          <a href="lore.html" class="nav-link">Lore</a>
+          <a href="wiki.html" class="nav-link">Wiki</a>
+        </nav>
+        <div class="header-right">
+          <div id="auth-button" class="auth-button"></div>
+          <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+        <a href="reglement.html">Règlement</a>
+        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer">Workshop</a>
+        <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer">Boutique</a>
+        <a href="lore.html">Lore</a>
+        <a href="wiki.html">Wiki</a>
+      </nav>
+    </header>
+
+    <main class="legal-content with-sidebar">
+      <div class="legal-hero">
+        <img class="hero-seal" src="logo.png" alt="" />
+        <h1 class="page-title small">Infos Serveur</h1>
+        <p class="legal-date">Dark Medieval — Vampire RP V3</p>
+        <div class="hero-divider">
+          <span class="hero-divider-line"></span>
+          <span class="hero-divider-dot">✦</span>
+          <span class="hero-divider-line"></span>
+        </div>
+        <p class="legal-note">Connexion, lignées, niveaux, incursions et glyphes.</p>
+      </div>
+
+      <div class="legal-layout">
+        <nav class="toc-sidebar toc-frame" aria-label="Sommaire des infos">
+          <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="toc-body">
+            <span>Sommaire</span>
+            <svg class="toc-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="toc-body" id="toc-body">
+          <ul>
+            <li><a href="#connexion">Connexion &amp; Horaires</a></li>
+            <li><a href="#lignes-sang">Lignées de Sang</a></li>
+            <li><a href="#lignes-actives">Lignées Actives — Factions</a></li>
+            <li><a href="#niveaux">Système de Niveaux</a></li>
+            <li><a href="#incursions">Incursions</a></li>
+            <li><a href="#glyphes">Glyphes</a></li>
+          </ul>
+          </div>
+        </nav>
+
+        <div class="legal-body parchment-panel">
+
+          <h2 id="connexion">Connexion &amp; Horaires</h2>
+          <ul>
+            <li><strong>Horaires :</strong> Le serveur ouvre à <strong>17h00</strong> et ferme à <strong>2h00</strong> du matin.</li>
+            <li><strong>IP :</strong> <code>162.19.94.181:27015</code></li>
+            <li><strong>TeamSpeak :</strong> <code>94.250.223.28:15071</code></li>
+            <li><strong>Discord :</strong> <a href="https://discord.gg/UvqNCvHMnk" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright)">discord.gg/UvqNCvHMnk</a></li>
+            <li><strong>Boutique :</strong> <a href="https://vampire-rp.tebex.io" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright)">vampire-rp.tebex.io</a></li>
+            <li><strong>Workshop :</strong> <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer" style="color:var(--gold-bright)">Collection Steam</a></li>
+          </ul>
+
+          <h2 id="lignes-sang">Lignées de Sang</h2>
+          <p>Les lignées de sang confèrent des bonus passifs selon leur rareté.</p>
+
+          <h3>Lignée Commune (~8,33 %)</h3>
+          <ul>
+            <li><strong>Sang de Léonidas</strong> — +8 % de dégâts avec un lance</li>
+            <li><strong>Sang de Loki</strong> — +8 % de dégâts sur les dagues et griffes</li>
+            <li><strong>Sang du Roi Arthur</strong> — +8 % de dégâts sur les épées</li>
+            <li><strong>Sang de Merlin</strong> — +8 % de dégâts sur les sorts</li>
+            <li><strong>Sang de Robin des Bois</strong> — +8 % de dégâts sur les arcs et arbalètes</li>
+            <li><strong>Sang de Gymmy</strong> — +8 % de dégâts sur les masses, haches et marteaux</li>
+          </ul>
+
+          <h3>Lignée Rare (~4,5 % / 2 %)</h3>
+          <ul>
+            <li><strong>Sang de Clovis</strong> — +40 HP maximum</li>
+            <li><strong>Sang de Richard Cœur de Lion</strong> — −8 % de dégâts reçus (hors feu)</li>
+            <li><strong>Sang de Jeanne d’Arc</strong> — Immunité à 60 % des dégâts liés au feu</li>
+            <li><strong>Sang des Maudits</strong> — Récupération de 3 HP à chaque attaque touchée</li>
+            <li><strong>Sang des Prophètes</strong> — +1 HP toutes les 2 secondes</li>
+          </ul>
+
+          <h3>Lignée Épique (~0,5 %)</h3>
+          <ul>
+            <li><strong>Sang de Ravaillac</strong> — +25 % de dégâts dans le dos + devient invisible lorsqu’il est accroupi</li>
+            <li><strong>Sang de Guillaume Tell</strong> — Fait le plein de flèches à chaque touche et +5 % de dégâts arcs/arbalètes</li>
+            <li><strong>Sang de Charlemagne</strong> — +100 HP (50 HP et 50 Mana pour les sorciers)</li>
+            <li><strong>Sang de Pharaon</strong> — +1 HP et 1 d’armure toutes les 2 secondes</li>
+            <li><strong>Sang de Hermès</strong> — +0,05 de vitesse (5 % de vitesse en plus)</li>
+          </ul>
+
+          <h3>Lignée Légendaire</h3>
+          <ul>
+            <li><strong>Sang de Clic-Clac</strong> (~29,92 %) — +0,1 de vitesse en skeleton et 50 HP supplémentaires</li>
+            <li><strong>Sang de Skeegan (Péché)</strong> (~9,99 %) — +0,1 de vitesse en skeleton, 100 HP, +5 de damage et pas de bruit de pas</li>
+          </ul>
+
+          <h3>Lignée du Péché (~0,4 %)</h3>
+          <ul>
+            <li><strong>Sang de Judas</strong> — Multiplie les dégâts dans le dos</li>
+            <li><strong>Sang de Yoichi</strong> — Multiplie les dégâts à l’arbalète et à l’arc</li>
+            <li><strong>Sang Draconique</strong> — Brûlé vous soigne</li>
+            <li><strong>Sang de Gilles de Rais</strong> — +100 HP et 25 d’armure à chaque élimination</li>
+            <li><strong>Sang d’Ivar</strong> — Jusqu’à 50 % de force en fonction des PV manquants</li>
+            <li><strong>Sang de Bjorn</strong> — Jusqu’à 30 % de résistance en fonction des PV manquants</li>
+            <li><strong>Sang de Goliath</strong> — −150 HP et +300 d’armure</li>
+            <li><strong>Sang du Draktar</strong> — Invisibilité pendant quelques secondes après une élimination</li>
+            <li><strong>Sang de David</strong> — +15 % de taux de critique</li>
+            <li><strong>Sang du Chevalier Vert</strong> — +5 % de taux d’esquive</li>
+            <li><strong>Sang de César</strong> — Renforce Force et Résistance en fonction des HP</li>
+          </ul>
+
+          <h3>Lignée Mythique</h3>
+          <ul>
+            <li><strong>Sang Mythique</strong> (~0,09 %) — Combine les lignées Commune et Rare</li>
+            <li><strong>Sang Ultime</strong> (~0,01 %) — Combine toutes les lignées Commune, Rare et Épique</li>
+            <li><strong>Sang Divin</strong> (~0,01 %) — Combine toutes les lignées du Péché</li>
+          </ul>
+
+          <h2 id="lignes-actives">Lignées Actives — Factions</h2>
+
+          <h3>Vampire</h3>
+          <ul>
+            <li><strong>Amon</strong> — Invisibilité pendant 3 secondes</li>
+            <li><strong>Belzebuth</strong> — Nuée de chauve-souris qui inflige des dégâts sur la durée</li>
+            <li><strong>Abbadon</strong> — Les prochains coups appliquent un saignement puissant</li>
+            <li><strong>Astaroth</strong> — Invincibilité pendant 5 secondes</li>
+            <li><strong>Lucifer</strong> — Zone de Drain de vie pendant 10 secondes</li>
+            <li><strong>Premier</strong> — Bénédiction du Premier suivi d’explosion sanglante à répétition</li>
+            <li><strong>Nuit</strong> — Invoque le pouvoir de l’Apôtre de la Nuit (scelle, aveugle, ralentit et inflige des dégâts)</li>
+          </ul>
+
+          <h3>Saint Royaume</h3>
+          <ul>
+            <li><strong>Uriel</strong> — Régénération de 50 HP sur 10 secondes</li>
+            <li><strong>Azrael</strong> — Brûle les hérésies qui attaquent le lanceur pendant 10 secondes</li>
+            <li><strong>Michel</strong> — Désarme l’adversaire</li>
+            <li><strong>Raphaël</strong> — Invincibilité pendant 5 secondes</li>
+            <li><strong>Gabriel</strong> — Brûle toutes les hérésies autour de vous pendant 10 secondes</li>
+            <li><strong>Christus</strong> — Invoque une énorme croix pour imposer son jugement</li>
+            <li><strong>Saint Roi</strong> — Le Saint Roi vient en aide et invoque la colère divine</li>
+          </ul>
+
+          <h3>Sorcier</h3>
+          <ul>
+            <li><strong>Spirituelle</strong> — Accélère la régénération de mana pendant 10 secondes</li>
+            <li><strong>Fureur</strong> — +5 de dégâts sur vos sorts pendant 15 secondes</li>
+            <li><strong>Mana</strong> — Se canalise pendant 10 secondes pour restaurer toute sa mana</li>
+            <li><strong>Arcanes</strong> — Ralentit sa cible pendant 10 secondes</li>
+            <li><strong>Fuite</strong> — Téléportation instantanée</li>
+            <li><strong>Gandoulf</strong> — Vole à grande distance mana et vie de la cible</li>
+            <li><strong>Infinie</strong> — Mana à réserve infinie pendant 10 secondes</li>
+          </ul>
+
+          <h3>Lycanthrope</h3>
+          <ul>
+            <li><strong>Nouvelle Lune</strong> — Immunité au Feu pendant 10 secondes</li>
+            <li><strong>Éclipse lunaire</strong> — Croc qui inflige des dégâts et vous soigne du même montant</li>
+            <li><strong>Pleine Lune</strong> — Augmentation de la vitesse durant 10 secondes</li>
+            <li><strong>Lune de Sang</strong> — Hurlement violent qui perturbe et ralentit les adversaires</li>
+            <li><strong>Carnage</strong> — Accès à un déplacement à 4 pattes + attaque renforcée à chaque changement de course</li>
+          </ul>
+
+          <h3>Chasseur de Monstre</h3>
+          <ul>
+            <li><strong>Éclaireur</strong> — Recharge l’entièreté de votre carquois</li>
+            <li><strong>Furtif</strong> — Déclenche une fumigène proche de vous</li>
+            <li><strong>Fugitif</strong> — Puissant bond en arrière</li>
+            <li><strong>Traqueur</strong> — Permet de traquer une cible (visible même à distance) + dégâts</li>
+            <li><strong>Boucherie</strong> — Rage : plus de dégâts aux monstres, soin et boost de vitesse si kill sous rage</li>
+          </ul>
+
+          <h3>Armée des Morts</h3>
+          <ul>
+            <li><strong>Ier Empereur</strong> — Invincibilité temporaire, les coups reçus vous soignent</li>
+            <li><strong>IIème Empereur</strong> — Ralentit les cibles autour de vous</li>
+            <li><strong>IIIème Empereur</strong> — Intouchable, feignez la mort et récupérez des PV pendant 10 secondes</li>
+            <li><strong>IVème Empereur</strong> — Si vous mourez après activation, vous ressuscitez soigné</li>
+            <li><strong>Prométhée</strong> — Châtiment de Prométhée (dégâts selon les PV actuels de la cible)</li>
+          </ul>
+
+          <h3>Guilde</h3>
+          <ul>
+            <li><strong>Discorde de Lorzac</strong> — Vos menottes sont retirées, les portes autour s’ouvrent</li>
+            <li><strong>La Bête</strong> — Bonus temporaire dans toutes les stats, légère perte de vie à la fin</li>
+            <li><strong>Margoloulou</strong> — Au prochain coup reçu, l’attaquant reçoit une vague de vision mystique</li>
+            <li><strong>Pierre de Foyer</strong> — Retour à la Guilde si non touché (auto en combat)</li>
+            <li><strong>Prague</strong> — Invoque des Héros de la Guilde pour une raclée</li>
+          </ul>
+
+          <h3>Pirate</h3>
+          <ul>
+            <li><strong>Main d’Or</strong> — +5 de dégât pur pendant 10 secondes (coût 10 pièces d’or par coup)</li>
+            <li><strong>Kogan</strong> — Vole instantanément un % des pièces d’or de la cible</li>
+            <li><strong>Morrissey</strong> — Obligation de fuite pendant 10 secondes + énorme bonus de vitesse</li>
+            <li><strong>Sirène</strong> — 3 vagues de hurlements (dégâts, perturbation, obscurcissement caméra)</li>
+            <li><strong>Fou</strong> — Énorme boulet de canon qui rase la zone devant vous</li>
+          </ul>
+
+          <h3>Rat</h3>
+          <ul>
+            <li><strong>Queek</strong> — Boost de 5 de dégât pendant 10 secondes</li>
+            <li><strong>Skrolk</strong> — Les 2 prochains coups appliquent du poison</li>
+            <li><strong>Ikit</strong> — Si vous mourez dans les 20 prochaines secondes, vous explosez</li>
+            <li><strong>Snitch</strong> — Invisibilité pendant 10 secondes (ou si touché)</li>
+            <li><strong>Rat Cornu</strong> — Boost de dégât, résistance et vitesse ; tombe à 1 HP au bout d’une minute</li>
+            <li><strong>Dragomir</strong> — Forme d’un de ses généraux + irradiation et poison</li>
+          </ul>
+
+          <h3>Reptilien</h3>
+          <ul>
+            <li><strong>Pluton</strong> — Régénération de 1 HP toutes les 2 secondes pendant 2 minutes</li>
+            <li><strong>Étoile Polaire</strong> — Invisibilité tant qu’il ne bouge pas</li>
+            <li><strong>Betelgeuse</strong> — Charge pendant 3 secondes et inflige des dégâts</li>
+            <li><strong>Loki</strong> — Flash qui aveugle pendant 1 seconde (2 fois)</li>
+            <li><strong>Soleil</strong> — Boost de HP le jour (nerf vitesse) / Boost de scale la nuit (nerf vie)</li>
+            <li><strong>Rigel</strong> — Invoque une partie d’un soleil bleu qui calcine la zone</li>
+          </ul>
+
+          <h3>Nain</h3>
+          <ul>
+            <li><strong>Fer</strong> — +50 d’armure en 10 secondes</li>
+            <li><strong>Argent</strong> — Aveugle celui qui l’attaque (1 fois par personne) pendant 30 secondes</li>
+            <li><strong>Or</strong> — Un grand saut sans dégât de chute</li>
+            <li><strong>Fer Noir</strong> — +100 d’armure d’un coup</li>
+            <li><strong>Mythril</strong> — +10 de résistance (et nerf vitesse) pendant 1 minute</li>
+          </ul>
+                    <!-- NIVEAUX -->
+          <h2 id="niveaux">Système de Niveaux &amp; Domaines</h2>
+          <p>
+            Les niveaux (statistiques) augmentent avec le temps d’activité.
+            Vous pouvez attribuer des points via l’autel présent dans chaque grande ville.
+          </p>
+          <p>
+            <strong>Stats possibles :</strong> Un passif niveau 50 puis un actif niveau 100
+            (niveau maximum d’une stat, puis possibilité de Rebirth au level 100,
+            ce qui augmente la puissance du bonus et remet les niveaux à 0.
+            Nombre de rebirth max par domaine : <strong>3</strong>).
+          </p>
+
+          <h3>Domaine de la Vitalité</h3>
+          <ul>
+            <li><strong>Passif :</strong> 10 % de vie maximale en plus</li>
+            <li><strong>Actif :</strong> Soin personnel sur la durée</li>
+          </ul>
+
+          <h3>Domaine de la Protection</h3>
+          <ul>
+            <li><strong>Passif :</strong> Dégâts reçus moins élevés quand vous avez de l’armure</li>
+            <li><strong>Actif :</strong> Armure temporaire</li>
+          </ul>
+
+          <h3>Domaine de l’Agilité</h3>
+          <ul>
+            <li><strong>Passif :</strong> Augmentation temporaire de la vitesse après avoir reçu un coup (sous cooldown)</li>
+            <li><strong>Actif :</strong> Saut en longueur</li>
+          </ul>
+
+          <h3>Domaine de la Force</h3>
+          <ul>
+            <li><strong>Passif :</strong> Au 3ᵉ coup donné en moins de 10 secondes, augmentation des dégâts</li>
+            <li><strong>Actif :</strong> Multiplie les dégâts de votre prochain coup</li>
+          </ul>
+
+          <h3>Domaine de la Robustesse</h3>
+          <ul>
+            <li><strong>Passif :</strong> Au 3ᵉ coup reçu en moins de 10 secondes, diminution des dégâts reçus</li>
+            <li><strong>Actif :</strong> Côte épineuse qui renvoie une partie des dégâts</li>
+          </ul>
+
+          <h3>Domaine du Critique</h3>
+          <ul>
+            <li><strong>Passif :</strong> Applique un ralentissement lors d’un coup critique</li>
+            <li><strong>Actif :</strong> Augmente les chances de Coup Critique pendant 15 secondes</li>
+          </ul>
+
+          <h3>Domaine du Mana</h3>
+          <ul>
+            <li><strong>Passif :</strong> Augmente la regen passif du mana</li>
+            <li><strong>Actif :</strong> Redonne une grande quantité de mana</li>
+          </ul>
+
+          <h3>Domaine de l’Esquive</h3>
+          <ul>
+            <li><strong>Passif :</strong> Après une esquive, augmente les dégâts de votre prochain coup</li>
+            <li><strong>Actif :</strong> Assure l’esquive du prochain coup reçu</li>
+          </ul>
+
+          <p>
+            <strong>Astuce Rebirth :</strong> les Rebirth permettent de revenir au niveau 0,
+            ce qui rend le gain d’XP beaucoup plus rapide. Il est plus facile de monter
+            de 0 à 100 qu’au-dessus du level 100 (sans rebirth).
+            Une fois le level 100 atteint, vous pouvez définir une touche (bind) pour activer votre actif
+            dans le menu de l’autel d’expérience.
+          </p>
+
+          <!-- INCURSIONS -->
+          <h2 id="incursions">Incursions</h2>
+          <p>
+            Les Incursions sont des affrontements mêlant factions principales + sorciers d’un côté,
+            et clans de l’autre. L’accès se fait par de mystérieux portails qui transportent les armées
+            vers des lieux remplis de ressources limitées.
+          </p>
+          <p>
+            Le camp vainqueur obtient une ressource essentielle à l’évolution passive via le RP passif
+            (dont les suivis RP). Pour remporter l’incursion, il suffit de trouver le drapeau
+            (6 emplacements pour les factions, 3 pour les clans) et de le capturer (appuyer 4 minutes).
+            Le drapeau se supprime automatiquement à la fin de sa capture.
+          </p>
+
+          <h3>Règles</h3>
+          <ul>
+            <li>L’accès au champ de bataille se fait via un portail annoncé au moins 10 minutes avant</li>
+            <li>Les Incursions ont lieu plusieurs fois par semaine (entre 2 et 4 fois selon l’effectif)</li>
+            <li>La seule aide externe autorisée est celle des animaux domptés et des aventuriers</li>
+            <li>Les Incursions des clans et des factions se déroulent en même temps</li>
+            <li>Zone spéciale située hors de la carte classique</li>
+            <li>Deux ressources peuvent être remportées selon la durée et la difficulté</li>
+            <li>Il est autorisé d’échanger des ressources avec un clan ou une faction</li>
+            <li>Le portail d’entrée initial se fermera au bout d’une minute</li>
+            <li>Pour sortir sans attendre la fin, il faut trouver un portail de fuite</li>
+          </ul>
+
+          <h3>Récompenses — Factions principales</h3>
+          <ul>
+            <li><strong>Gemme Rouge</strong> — Suivis liés aux pouvoirs Offensif</li>
+            <li><strong>Gemme Bleu</strong> — Suivis liés aux pouvoirs Défensif</li>
+            <li><strong>Gemme Verte</strong> — Suivis liés aux pouvoirs de Soutien</li>
+          </ul>
+
+          <h3>Récompenses — Clans</h3>
+          <ul>
+            <li><strong>Stock de Ravitaillement</strong> — Suivis liés à l’artisanat</li>
+            <li><strong>Pierre de Rune</strong> — Suivis liés aux améliorations physiques</li>
+            <li><strong>Manuscrit Ancien</strong> — Suivis liés à la recherche</li>
+          </ul>
+          <p>
+            Les suivis RP nécessitant une de ces ressources sont liés à des gains importants.
+            Exemple : vous n’aurez pas besoin d’une Gemme Verte pour un simple suivi de bandage.
+            Si l’objectif de votre suivi est clair, votre narrateur vous indiquera avant le début
+            les ressources nécessaires à son accomplissement.
+          </p>
+
+          <!-- GLYPHES -->
+          <h2 id="glyphes">Glyphes</h2>
+          <p>
+            Total : 10 factions, ~110 glyphes.<br />
+            Rareté indicative : <strong>60/50 %</strong> = Commun · <strong>30/25/20 %</strong> = Rare ·
+            <strong>15/10/9,9 %</strong> = Épique · <strong>0,1 %</strong> = Légendaire.
+          </p>
+
+          <h3>Vampire — Morsure</h3>
+          <ul>
+            <li><strong>Morsure Profonde</strong> (60 %) — +25 % portée, +25 % cooldown</li>
+            <li><strong>Morsure Rapide</strong> (60 %) — −25 % cooldown, −25 % portée</li>
+            <li><strong>Morsure de Rage</strong> (30 %) — Bonus de vitesse après morsure</li>
+            <li><strong>Morsure du Tueur</strong> (30 %) — Kill/assistance (5s) reset le cooldown</li>
+            <li><strong>Morsure du Vif</strong> (9,9 %) — Esquive le prochain coup ennemi après morsure</li>
+            <li><strong>Morsure Lourde</strong> (9,9 %) — Onde de choc à l’atterrissage (50 dmg, 200 rayon)</li>
+            <li><strong>Morsure à Double Face</strong> (0,1 %) — Ajoute une seconde charge de Morsure</li>
+          </ul>
+
+          <h3>Vampire — Régénération personnelle</h3>
+          <ul>
+            <li><strong>Régénération Rapide</strong> (60 %) — +25 % soin, +25 % cooldown</li>
+            <li><strong>Régénération à Répétition</strong> (60 %) — −90 % cd, −90 % soin</li>
+            <li><strong>Régénération d’Assistance</strong> (30 %) — Soigne un vampire visé à ta place (+25 %)</li>
+            <li><strong>Régénération Ambidextre</strong> (30 %) — 2ᵉ charge, +50 % cd sur les deux</li>
+            <li><strong>Régénération Goliath</strong> (9,9 %) — +10 % résistance 15s après régen</li>
+            <li><strong>Régénération Traqueur</strong> (9,9 %) — +13 % force 15s après régen</li>
+            <li><strong>Régénération Titanesque</strong> (0,1 %) — Soigne 25 % des PV manquants</li>
+          </ul>
+
+          <h3>Vampire — Obsession</h3>
+          <ul>
+            <li><strong>Obsession de Zone II</strong> (60 %) — Perd obsession ciblée, double durée zone</li>
+            <li><strong>Obsession Ciblé II</strong> (60 %) — Perd obsession zone, double durée ciblée</li>
+            <li><strong>Obsession Ciblé III</strong> (30 %) — +50 % puissance, −50 % durée ciblée</li>
+            <li><strong>Obsession de Zone III</strong> (30 %) — +50 % puissance, −50 % durée zone</li>
+            <li><strong>Obsession du Charognard</strong> (9,9 %) — Tuer obsession ciblée soigne 25 % HP manquants</li>
+            <li><strong>Obsession de la Démence</strong> (9,9 %) — Tuer obsession zone → prochain coup critique</li>
+            <li><strong>Obsession Hybride</strong> (0,1 %) — Permet une obsession ciblée de zone</li>
+          </ul>
+
+          <h3>Vampire — Vision Vampirique</h3>
+          <ul>
+            <li><strong>Vision de l’Aigle</strong> (60 %) — +25 % portée mais plus à travers murs</li>
+            <li><strong>Vision du Perver</strong> (60 %) — Vision ciblable, la cible brille longtemps</li>
+            <li><strong>Vision Attentive</strong> (30 %) — +10 % portée mais vampires invisibles</li>
+            <li><strong>Vision Concentrée</strong> (30 %) — Actif +25 % portée (120s/120s cd)</li>
+            <li><strong>Vision Chauve Souris</strong> (9,9 %) — Actif sonar révélant tes proches aux vampires</li>
+            <li><strong>Vision Presque Parfaite</strong> (0,1 %) — Actif d’immunité aux aveuglements (30s / 120s cd)</li>
+          </ul>
+
+          <h3>Vampire — Transfusion Sanguine</h3>
+          <ul>
+            <li><strong>Transfusion Lourde</strong> (60 %) — +25 % HP donné, +25 % HP pris</li>
+            <li><strong>Transfusion Légère</strong> (60 %) — −25 % cd, −25 % HP donné</li>
+            <li><strong>Transfusion d’Armure</strong> (30 %) — Consomme ton armure pour régen armure de la cible</li>
+            <li><strong>Transfusion Instable</strong> (30 %) — Double HP donné mais désagrégation temporelle</li>
+            <li><strong>Transfusion Égoiste</strong> (9,9 %) — Peut prendre des HP à un autre vampire</li>
+            <li><strong>Transfusion Maîtrisé</strong> (9,9 %) — Donne sans perdre</li>
+            <li><strong>Transfusion Divergente</strong> (0,1 %) — Peut être utilisée à grande distance</li>
+          </ul>
+
+          <h3>Vampire — Vol</h3>
+          <ul>
+            <li><strong>Vol Frénétique</strong> (60 %) — Cooldown +50 %, durée de vol +50 %</li>
+            <li><strong>Vol Endurant</strong> (30 %) — Cooldown −50 %, durée de vol −50 %</li>
+            <li><strong>Vol Fulgurant</strong> (9,9 %) — Vitesse de vol +50 %, durée de vol −50 %</li>
+            <li><strong>Vol Infini</strong> (30 %) — Pas de durée de vol</li>
+          </ul>
+
+          <h3>Saint Royaume — Crucifix</h3>
+          <ul>
+            <li><strong>Crucifix Purificateur</strong> (60 %) — −50 % dégâts initiaux, ×2 durée feu sur hérésies</li>
+            <li><strong>Crucifix de Grande Taille</strong> (60 %) — ×2 portée, −50 % dégâts initiaux</li>
+            <li><strong>Crucifix Aveuglant</strong> (30 %) — Remplace dégâts par aveuglement</li>
+            <li><strong>Crucifix Bienfaiteur</strong> (30 %) — Soigne ceux qui partagent votre Foi</li>
+            <li><strong>Crucifix du Protecteur</strong> (9,9 %) — +10 % résistance 15s après</li>
+            <li><strong>Crucifix du Guerrier</strong> (9,9 %) — +13 % force 15s après</li>
+            <li><strong>Crucifix du Messi</strong> (0,1 %) — Fait fuir hérésies + visions</li>
+          </ul>
+
+          <h3>Saint Royaume — Déplacement Divin / Blink</h3>
+          <ul>
+            <li><strong>Déplacement à Grande Portée</strong> (60 %) — +25 % portée, +25 % cd</li>
+            <li><strong>Déplacement Rapide</strong> (60 %) — −25 % cd, −25 % portée</li>
+            <li><strong>Déplacement du Chasseur</strong> (30 %) — Bonus vitesse après blink</li>
+            <li><strong>Déplacement du Bourreau</strong> (30 %) — Kill/assistance 5s reset le cd</li>
+            <li><strong>Déplacement du Boucher</strong> (9,9 %) — Prochain coup critique après blink</li>
+            <li><strong>Déplacement Incendier</strong> (9,9 %) — Brûle les hérésies proches de la zone</li>
+            <li><strong>Déplacement à Double Page</strong> (0,1 %) — 2ᵉ charge de blink</li>
+          </ul>
+
+          <h3>Saint Royaume — Bénédiction</h3>
+          <ul>
+            <li><strong>Bénédiction du Protecteur</strong> (60 %) — Perd force, ×2 durée résistance</li>
+            <li><strong>Bénédiction du Guerrier</strong> (60 %) — Perd résistance, ×2 durée force</li>
+            <li><strong>Bénédiction du Guerrier II</strong> (30 %) — −50 % durée, +50 % puissance force</li>
+            <li><strong>Bénédiction du Protecteur II</strong> (30 %) — −50 % durée, +50 % puissance résistance</li>
+            <li><strong>Bénédiction du Fou</strong> (9,9 %) — Kill sous force → vitesse + force boostées</li>
+            <li><strong>Bénédiction du Gardien</strong> (9,9 %) — Kill sous résistance → armure + résistance boostées</li>
+            <li><strong>Bénédiction Sainte</strong> (0,1 %) — Force ET résistance simultanément</li>
+          </ul>
+
+          <h3>Saint Royaume — Charge du Royaume</h3>
+          <ul>
+            <li><strong>Charge du Vif</strong> (60 %) — +25 % vitesse, −25 % durée</li>
+            <li><strong>Charge Endurante</strong> (60 %) — −25 % vitesse, +25 % durée</li>
+            <li><strong>Charge Héroique</strong> (30 %) — Solo mais +50 % plus puissante</li>
+            <li><strong>Charge du Guide</strong> (30 %) — Uniquement sur les autres (+25 %)</li>
+            <li><strong>Charge de l’Avant Garde</strong> (9,9 %) — Prochain coup reçu annulé</li>
+            <li><strong>Charge Sanguinaire</strong> (9,9 %) — Prochain coup donné = critique</li>
+            <li><strong>Charge Universelle</strong> (0,1 %) — Affecte tous les porteurs de la marque des éveillés</li>
+          </ul>
+
+          <h3>Saint Royaume — Prière / Heal</h3>
+          <ul>
+            <li><strong>Prière forte</strong> (60 %) — +25 % HP donnés, +25 % cd</li>
+            <li><strong>Prière rapide</strong> (60 %) — −50 % cd, −50 % HP donnés</li>
+            <li><strong>Prière armure</strong> (30 %) — Donne armure au lieu de vie</li>
+            <li><strong>Prière proche</strong> (30 %) — +25 % HP mais range très courte</li>
+            <li><strong>Prière instantanée</strong> (9,9 %) — Soigne instantanément à distance</li>
+            <li><strong>Prière lente forte</strong> (9,9 %) — +50 % temps regen, +50 % regen</li>
+            <li><strong>Prière sainte</strong> (0,1 %) — Regen très loin + brûle hérétiques 5s</li>
+          </ul>
+
+          <h3>Sorcier (s’applique à tous les sorts)</h3>
+          <ul>
+            <li><strong>Maître du feu / eau / terre / vent</strong> (50 %) — −25 % coût de l’élément, +25 % coût des autres</li>
+            <li><strong>Glyphe de Puissance Magique</strong> (30 %) — +25 % dégâts, +25 % coût mana</li>
+            <li><strong>Glyphe de Contrôle du Mana</strong> (30 %) — −25 % dégâts, −25 % coût mana</li>
+            <li><strong>Glyphe de Régénération de Mana</strong> (9,9 %) — Mana max ÷2, régen mana ×2</li>
+            <li><strong>Glyphe de Réserve de Mana</strong> (9,9 %) — Mana max ×2, régen mana ÷2</li>
+          </ul>
+
+          <h3>Guilde — Botte de Saut</h3>
+          <ul>
+            <li><strong>Botte à Haute Cadence</strong> (60 %) — −25 % portée, −25 % cd</li>
+            <li><strong>Botte à longue portée</strong> (60 %) — +25 % portée, +25 % cd</li>
+            <li><strong>Botte à Double Semelles</strong> (0,1 %) — Charge supplémentaire</li>
+          </ul>
+
+          <h3>Chasseur de Monstres</h3>
+          <p><em>Mineurs</em></p>
+          <ul>
+            <li><strong>Priorité aux Monstres</strong> (30 %) — +10 % dmg monstres, −10 % autres</li>
+            <li><strong>Humains Monstrueux</strong> (30 %) — −10 % dmg monstres, +10 % autres</li>
+            <li><strong>Connaissance Absolue</strong> (20 %) — −90 % dégâts arbalètes reçus, −5 % résistance globale</li>
+            <li><strong>Maître Arbalétrier</strong> (20 %) — +25 % dégâts arbalètes, −10 % force</li>
+            <li><strong>Anti-Fuite</strong> (10 %) — Vitesse boostée en frappant des monstres</li>
+          </ul>
+          <p><em>Majeurs</em></p>
+          <ul>
+            <li><strong>Rail de Guidage Court</strong> (30 %) — −25 % portée, +25 % dégâts</li>
+            <li><strong>Viseur Améliorée</strong> (30 %) — +50 % portée, −50 % dégâts</li>
+            <li><strong>Rail de Guidage long</strong> (20 %) — −50 % de retombée sur HQ</li>
+            <li><strong>Arbalète Renforcée</strong> (20 %) — +25 % dégâts HQ</li>
+            <li><strong>Pas content ? Quintuplé</strong> (0,1 %) — Triple → Quintuple</li>
+            <li><strong>Carreaux Concentrée</strong> (0,1 %) — Triple → un seul carreau bien plus puissant</li>
+          </ul>
+
+          <h3>Reptilien — Mineurs</h3>
+          <ul>
+            <li><strong>Soleil Vélocitaire</strong> (25 %) — +vitesse le jour</li>
+            <li><strong>Soleil Curatif</strong> (25 %) — +1 HP/armor toutes les 4s le jour</li>
+            <li><strong>Soleil Ascendant</strong> (20 %) — Résistance + force le jour, inversé la nuit</li>
+            <li><strong>Soleil Perçant</strong> (20 %) — +5 % critique le jour</li>
+            <li><strong>Soleil Ondoyant</strong> (10 %) — +2 % esquive le jour</li>
+          </ul>
+
+          <h3>Rat</h3>
+          <p><em>Mineurs</em></p>
+          <ul>
+            <li><strong>L’honneur c’est pour les faibles</strong> (30 %) — +10 % dmg dans le dos, −5 % force</li>
+            <li><strong>Adrénaline de Rongeur</strong> (20 %) — Bonus vitesse après avoir été brûlé</li>
+            <li><strong>Protection du Cornu</strong> (20 %) — +15 % résistance magique, −5 vitesse</li>
+            <li><strong>Cuirasse des Bas Fonds</strong> (20 %) — −25 vitesse, +225 HP</li>
+            <li><strong>Immunité à la Crasse</strong> (10 %) — Immunité au poison</li>
+          </ul>
+          <p><em>Majeurs</em></p>
+          <ul>
+            <li><strong>Dévoration du Gourmet</strong> (50 %) — +25 % HP dévoration, +25 % cd</li>
+            <li><strong>Dévoration de la Vermine</strong> (50 %) — Dévoration donne vitesse, +25 % cd</li>
+          </ul>
+
+          <h3>Lycans</h3>
+          <p><em>Mineurs</em></p>
+          <ul>
+            <li><strong>Lune Rouge</strong> (25 %) — +vitesse la nuit</li>
+            <li><strong>Lune Bleu</strong> (25 %) — +1 HP/armor toutes les 4s la nuit</li>
+            <li><strong>Lune Violette</strong> (20 %) — Résistance + force la nuit, inversé le jour</li>
+            <li><strong>Lune Blanche</strong> (20 %) — +5 % critique la nuit</li>
+            <li><strong>Lune Noir</strong> (10 %) — +2 % esquive la nuit</li>
+          </ul>
+          <p><em>Majeurs</em></p>
+          <ul>
+            <li><strong>Rugissement du Dominant</strong> (50 %) — +25 % puissance rugissement, +25 % cd</li>
+            <li><strong>Transformation Rapide</strong> (50 %) — −50 % temps transfo, +50 % cd détransfo</li>
+          </ul>
+
+          <h3>Pirates</h3>
+          <p><em>Mineurs</em></p>
+          <ul>
+            <li><strong>L’eau ça soigne</strong> (25 %) — +1 HP/armor toutes les 2s dans l’eau</li>
+            <li><strong>La mort peut attendre</strong> (20 %) — Bonus vitesse sous 150 HP</li>
+            <li><strong>Poche Fermée</strong> (20 %) — −25 % or perdu à la mort</li>
+            <li><strong>Pilleur Fou</strong> (20 %) — Victimes drop 75 % de leur or, toi aussi</li>
+            <li><strong>Chapeau de Capitaine</strong> (15 %) — Plus d’or = plus puissant (paliers)</li>
+          </ul>
+          <p><em>Majeurs</em></p>
+          <ul>
+            <li><strong>Requin Marteau</strong> (50 %) — +5s transfo, +25 % HP transformation</li>
+            <li><strong>Requin du Typhon</strong> (50 %) — +10 % taille transfo + tornade d’eau protectrice</li>
+          </ul>
+
+          <h3>Armée des Morts — Mineurs</h3>
+          <ul>
+            <li><strong>La Mort Prend la Vie</strong> (30 %) — −25 armure, +30 HP par kill</li>
+            <li><strong>La mort ne peut Mourir</strong> (20 %) — −35 HP / −15 armure, absorbe 1 coup mortel</li>
+            <li><strong>Sacrifice Mortuaire</strong> (20 %) — Mourir à côté d’un mort le soigne (+25)</li>
+            <li><strong>Putréfaction Mortelle</strong> (20 %) — +10 % dmg DoT sur toi, +25 % dmg sacré subis</li>
+            <li><strong>Un Mort peut en cacher un autre</strong> (10 %) — À ta mort, un PNJ mort prend la relève</li>
+          </ul>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Lien utiles</h4>
+            <a href="https://discord.gg/UvqNCvHMnk" target="_blank" rel="noopener noreferrer">Discord</a>
+            <a href="ts3server://94.250.223.28:15071">TeamSpeak</a>
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3038532405" target="_blank" rel="noopener noreferrer">Workshop</a>
+          </div>
+          <div class="footer-col">
+            <h4>Mentions Légales</h4>
+            <a href="cgu.html">Conditions générales d'utilisation</a>
+            <a href="cgv.html">Conditions générales de vente</a>
+          </div>
+        </div>
+        <p class="footer-copy">© 2026 Vampire RP V3 — Tous droits réservés</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
