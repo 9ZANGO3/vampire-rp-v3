@@ -1,6 +1,6 @@
 exports.handler = async () => {
-  const returnUrl = "https://vampire-rp-v3.netlify.app/.netlify/functions/auth-callback";
-  const realm = "https://vampire-rp-v3.netlify.app";
+  const returnUrl = "https://vampire-rp.netlify.app/.netlify/functions/auth-callback";
+  const realm = "https://vampire-rp.netlify.app";
 
   const params = new URLSearchParams({
     "openid.ns": "http://specs.openid.net/auth/2.0",
